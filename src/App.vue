@@ -683,7 +683,379 @@
     </div>
     <!-- Mobile -->
     <div v-if="isMobile" class="w=full h-auto">
-      <div class="w-full h-auto flex flex-col bg-[#171717]">
+      <div class="relative w-full h-[865vw] flex flex-col bg-[#D5D5D5] items-center">
+        <!-- Đoạn này để back vàng -->
+        <img src="../src/assets/img/Mobile/Homepage/ImgLeftHome.webp" alt=""
+          class="w-[68.7vw] absolute top-[25.4vw] left-0">
+        <img src="../src/assets/img/Mobile/Homepage/ImgRightHome.webp" alt=""
+          class="w-[81.5vw] absolute top-[51.3vw] right-[0vw]">
+
+        <!-- Text -->
+        <div class="absolute top-[150vw] space-y-[2vw] w-full flex flex-col items-center">
+          <p class="text-center text-[#1E1E1E] text-[8.14vw] font-emeritus leading-[8.15vw] tracking-[-1.1%]">An
+            Exciting World<br />
+            of Adventure</p>
+          <p class="text-[#1E1E1E] text-center text-[3.05vw] font-lexend">Summon your champions to the battlefield of
+            Idle Area! Call forth mighty warriors, upgrade their power, and forge an unstoppable team. The fight for
+            glory begins—answer the call now!</p>
+          <div class="flex items-center justify-center w-[35.6vw] relative">
+            <img src="../src/assets/img/Desktop/HomePage/button.webp" alt="" class="w-full h-auto">
+            <p class="font-lexend text-[#1E1E1E] text-[3.05vw] text-center absolute uppercase font-bold leading-[3vw]">
+              Join now</p>
+          </div>
+        </div>
+
+        <!-- Conquer Chapters -->
+        <div class="absolute top-[193vw] w-full h-[133.6vw] flex justify-center">
+          <img src="../src/assets/img/Desktop/HomePage/ball.webp" alt=""
+            class="w-[16vw] absolute top-[18.17vw] left-[19.6vw]">
+          <img src="../src/assets/img/Desktop/HomePage/light-purple.webp" alt=""
+            class="absolute w-full h-auto bottom-[20vw]">
+          <img src="../src/assets/img/Desktop/HomePage/cybog.webp" alt="" class="w-[61.83vw] absolute top-[11.96vw]">
+          <img src="../src/assets/img/Desktop/HomePage/ball-1.webp" alt=""
+            class="w-[9vw] absolute top-[39vw] left-[3.8vw]">
+          <img src="../src/assets/img/Desktop/HomePage/ball-2.webp" alt=""
+            class="w-[20.3vw] absolute top-[35.36vw] right-[5vw]">
+          <!-- Text -->
+          <div class="w-full flex flex-col items-center absolute top-[55vw] space-y-[2vw]">
+            <p class="text-[#1E1E1E] text-[8.14vw] font-emeritus leading-[8vw] tracking-[-1.1%] text-center">Conquer
+              Chapters<br />
+              Climb the Stages</p>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-lexend text-center leading-[4.5vw]">
+              Lead your heroes through an epic journey,<br />
+              battling enemies and bosses across countless<br />
+              chapters and
+              stages.
+            </p>
+          </div>
+
+          <!-- purple smoke -->
+          <img src="../src/assets/img/Mobile/Conquer/ConquerPurpleSmoke.webp" alt=""
+            class="w-full h-auto absolute bottom-0">
+        </div>
+
+        <div
+          class="absolute top-[325vw] w-full h-[219.6vw] rounded-[3.56vw] bg-gradient-to-b from-[#E8E8E8] to-transparent"
+          style="box-shadow: 0 0 80px 0 #00000060;">
+          <div class="absolute flex flex-col items-center w-full bottom-[3.05vw] space-y-[3.8vw]">
+            <img src="../src/assets/img/Desktop/Experience/game.webp" alt="" class="w-[95vw] h-auto">
+            <img src="../src/assets/img/Desktop/Experience/reward.webp" alt="" class="w-[95vw] h-auto">
+          </div>
+          <div class="absolute w-[95vw] flex flex-col items-start left-[2.5vw] top-[4.07vw]">
+            <p class="text-[#1E1E1E] text-[7.8vw] tracking-[-1.1%] font-emeritus leading-[8vw]">Experience an exciting
+            </p>
+            <p class="mt-[3vw] text-[#F9791C] uppercase font-emeritus text-[19.3vw] tracking-[-0.3vw] leading-[19vw]">
+              Idle RPG</p>
+            <p class="text-[#1E1E1E] text-[3.05vw] font-lexend text-start leading-[4.5vw] mt-[7vw]">
+              Immerse yourself in a thrilling idle RPG - battles never stop.
+              <br /> Earn valuable rewards even while you’re offline
+            </p>
+          </div>
+        </div>
+
+        <!-- Adventure -->
+        <div class="absolute top-[545vw] w-full h-[314.122vw] flex flex-col justify-center">
+          <img src="../src/assets/img/Mobile/Adventure/AdventureActor.webp" alt="" class="w-full absolute top-0">
+          <div class="absolute top-[80vw] w-full flex flex-col items-center">
+            <p class="text-[#F9791C] text-[13.99vw] w-[95vw] font-emeritus uppercase leading-[14vw] mr-[2.5vw]">
+              Adventure</p>
+            <p class="text-[#1E1E1E] text-[8.14vw] font-emeritus leading-[8vw] mt-[3vw]">Conquer all challenges</p>
+            <p
+              class="text-[#1E1E1E] text-[3.05vw] font-lexend leading-[3vw] mt-[5vw] tracking-[-0.1vw] w-[95vw] text-end">
+              Immerse
+              yourself in a thrilling
+              idle RPG -
+              battles never stop.</p>
+          </div>
+          <div class="absolute bottom-[0vw] w-full flex flex-col space-y-[3.8vw] items-center">
+            <img src="../src/assets/img/Desktop/Adventure/adventure1.webp" alt="" class="w-[95vw] h-auto">
+            <img src="../src/assets/img/Desktop/Adventure/adventure2.webp" alt="" class="w-[95vw] h-auto">
+            <img src="../src/assets/img/Desktop/Adventure/adventure3.webp" alt="" class="w-[95vw] h-auto">
+            <img src="../src/assets/img/Desktop/Adventure/adventure4.webp" alt="" class="w-[95vw] h-auto">
+            <img src="../src/assets/img/Desktop/Adventure/adventure5.webp" alt="" class="w-[95vw] h-auto">
+          </div>
+        </div>
+      </div>
+
+      <!-- Thẻ để chuyển - để lại làm 1 lượt -->
+      <div class="relative w-full h-[244.3vw] bg-white"></div>
+
+      <!-- 5 actors -->
+      <div class="relative w-full h-[440vw] bg-[#FFFAEB]">
+        <img src="../src/assets/img/Mobile/ACTOR/BackTop.webp" alt="" class="w-full h-auto absolute top-0">
+        <img src="../src/assets/img/Desktop/ACTOR/ACTOR_Xinzhao.webp" alt=""
+          class="w-[50.6vw] absolute top-[11.96vw] right-[3.3vw]">
+
+        <!-- Text -->
+        <div class="absolute top-[62vw] w-full flex flex-col items-center space-y-[5vw]">
+          <!-- 1 -->
+          <div class="w-[95vw] flex flex-col">
+            <div class="flex flex-row w-full items-center justify-start space-x-[3vw]">
+              <p class="text-[#1e1e1e] text-[5.089vw] font-emeritus leading-[5vw]">Awaken Ember</p>
+              <img src="../src/assets/img/Mobile/ACTOR/AwakenEmber.webp" alt="" class="w-[8.4vw]">
+            </div>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-league">Description: This group of characters carries within
+              them a mysterious, primal energy, awakened from a forgotten world. The characters in Awaken Ember
+              possess ancient powers and the ability to control fire or natural elements. They are not only powerful
+              but also exude an aura of mysticism, inspired by ancient creatures and arcane magic.<br />
+              Key Features:<br />
+              • Supernatural powers derived from fire or natural elements.<br />
+              • Ability to heal quickly thanks to mystical energy.<br />
+              • Can summon creatures or natural elements to
+              assist in combat.</p>
+          </div>
+          <!-- 2 -->
+          <div class="w-[95vw] flex flex-col">
+            <div class="flex flex-row w-full items-center justify-start space-x-[3vw]">
+              <p class="text-[#1e1e1e] text-[5.089vw] font-emeritus leading-[5vw]">Beast</p>
+              <img src="../src/assets/img/Mobile/ACTOR/Beast.webp" alt="" class="w-[8.4vw]">
+            </div>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-league">Description: The warriors in the Beast group possess
+              extraordinary strength, derived from their wild instincts and powerful physiques. They are inspired by
+              fierce beasts, embodying unmatched strength and primal combat prowess. Their battle style is aggressive
+              and relentless, never hesitating to charge into battle with full force.<br />
+              Key Features:<br />
+              • Exceptional physical strength and speed.<br />
+              • Powerful close-range combat abilities with devastating attacks.<br />
+              • Special expertise in using heavy weapons or combat techniques tied to nature.</p>
+          </div>
+          <!-- 3 -->
+          <div class="w-[95vw] flex flex-col">
+            <div class="flex flex-row w-full items-center justify-start space-x-[3vw]">
+              <p class="text-[#1e1e1e] text-[5.089vw] font-emeritus leading-[5vw]">Cyborg</p>
+              <img src="../src/assets/img/Mobile/ACTOR/Cyborg.webp" alt="" class="w-[8.4vw]">
+            </div>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-league">Description: The Cyborg group is a fusion of man and
+              machine, where warriors are enhanced with advanced technology. These characters have mechanical body parts
+              that significantly boost their physical strength and combat abilities. They also possess the ability to
+              control machinery and harness cutting-edge technology in battle.<br />
+              Key Features:<br />
+              • A combination of human body and robotic parts, enhancing strength and speed.<br />
+              • Capable of using advanced technology and controlling devices remotely.<br />
+              • Highly durable in long battles, with quick self-repair abilities thanks to technology.</p>
+          </div>
+          <!-- 4 -->
+          <div class="w-[95vw] flex flex-col">
+            <div class="flex flex-row w-full items-center justify-start space-x-[3vw]">
+              <p class="text-[#1e1e1e] text-[5.089vw] font-emeritus leading-[5vw]">Human</p>
+              <img src="../src/assets/img/Mobile/ACTOR/Human.webp" alt="" class="w-[7.3vw]">
+            </div>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-league">Description: This group consists of human warriors who
+              possess special abilities without relying on technology or magic. These characters are flexible and
+              skilled, ranging from experienced fighters to expert explorers. They excel in combat through strategy,
+              dexterity, and adaptability in tough situations.<br />
+              Key Features:<br />
+              • Diverse combat skills and tactics.<br />
+              • High flexibility, able to use a wide range of weapons and gear.<br />
+              • Resilience and the ability to adapt to any battlefield.</p>
+          </div>
+          <!-- 5 -->
+          <div class="w-[95vw] flex flex-col">
+            <div class="flex flex-row w-full items-center justify-start space-x-[3vw]">
+              <p class="text-[#1e1e1e] text-[5.089vw] font-emeritus leading-[5vw]">Ultron</p>
+              <img src="../src/assets/img/Mobile/ACTOR/Ultron.webp" alt="" class="w-[7.3vw]">
+            </div>
+            <p class="text-[#1e1e1e] text-[3.05vw] font-league">Description: The Ultron group features characters with
+              superior technological abilities, blending artificial intelligence with enhanced strength. They have
+              intelligent minds and systems capable of analyzing and predicting battles instantly. The characters in the
+              Ultron group can create powerful weapons and maintain constant offensive capabilities.<br />
+              Key Features:<br />
+              • Possess artificial intelligence and the ability to optimize combat strategies.<br />
+              • Can control high-tech weapons and create support tools for combat.<br />
+              • Consistent strength and the ability to battle with superior capabilities, always staying one step ahead
+              of the enemy.</p>
+          </div>
+        </div>
+
+        <!-- Image bottom -->
+        <img src="../src/assets/img/Mobile/ACTOR/BackBot.webp" alt="" class="w-full h-auto absolute bottom-0">
+
+        <img src="../src/assets/img/Desktop/ACTOR/ACTOR_Kathus.webp" alt=""
+          class="w-[47.5vw] absolute bottom-[5.1vw] left-[3.1vw]">
+      </div>
+
+      <!-- CTA -->
+      <div class="relative w-full h-[505.8vw] flex flex-col items-center bg-[#FFFAEB]">
+        <img src="../src/assets/img/Desktop/CTA/CTA_Wheel_back.webp" alt="" class="w-[87.8vw] absolute top-[25.4vw]">
+        <img src="../src/assets/img/Desktop/CTA/CTA_Darius.webp" alt="" class="w-[83vw] absolute top-[29.5vw]">
+        <!-- Text -->
+        <div class="absolute top-[90.33vw] w-full h-auto flex flex-col items-center">
+          <p class="w-[97vw] text-center text-[#1e1e1e] text-[7.3vw] font-emeritus leading-[7.884vw] tracking-[-1.1%]">
+            Kickstart Your
+            <br />
+            Adventure in Style
+          </p>
+          <p class="w-[87vw] text-center text-[#1e1e1e] text-[3.56vw] font-league leading-[4.5vw]">
+            Log in for the first time to claim valuable gifts and limited-<br />
+            time bonuses! Boost your journey, unlock exclusive gear, and<br />
+            start your gaming adventure with excitement.
+          </p>
+          <div class="w-[35.6vw] mt-[6.1vw] justify-center items-center relative flex">
+            <img src="../src/assets/img/Desktop/HomePage/button.webp" alt="" class="w-full">
+            <p class="absolute text-[#1e1e1e] text-[3.7vw] font-league uppercase font-bold leading-[4.2vw]">Free to play
+            </p>
+          </div>
+        </div>
+
+        <!-- line -->
+        <div class="absolute top-[148vw] w-full flex flex-col items-center">
+          <div class="w-full h-[15.27vw] flex flex-col justify-center items-center">
+            <img src="../src/assets/img/Mobile/CTA/bg-playnow.webp" alt="" class="w-full h-auto">
+            <p class="absolute text-[#1e1e1e] text-[5.08vw] font-emeritus"> Play Now – Anywhere!</p>
+          </div>
+          <!-- button download -->
+          <div class="w-full h-auto mt-[3.82vw] flex flex-row justify-center items-center space-x-[3.7vw]">
+            <div
+              class="w-[45.8vw] h-[13.28vw] rounded-[2vw] bg-white border-[1px] border-[#A6A6A6] flex flex-row items-center justify-center space-x-[1.5vw]">
+              <img src="../src/assets/img/Desktop/CTA/CTA_Apple.webp" alt="" class="w-[7.3vw]">
+              <img src="../src/assets/img/Desktop/CTA/AppStore.png" alt="" class="w-[27.06vw]">
+            </div>
+            <div
+              class="w-[45.8vw] h-[13.28vw] rounded-[2vw] bg-white border-[1px] border-[#A6A6A6] flex flex-row items-center justify-center space-x-[1.5vw]">
+              <img src="../src/assets/img/Desktop/CTA/CTA_GG_Play.webp" alt="" class="w-[7.3vw]">
+              <img src="../src/assets/img/Desktop/CTA/GGPLay.png" alt="" class="w-[27.06vw]">
+            </div>
+          </div>
+
+          <!-- discord/ facebook -->
+          <div class="w-full h-[33vw] flex flex-col justify-center mt-[3.9vw] overflow-hidden">
+            <div class="w-full h-[20.3vw] relative flex flex-col items-center">
+              <div class="w-full h-[12.72vw] bg-gradient-to-tr from-[#BA81FF] to-[#FFC3F9] absolute bottom-0"></div>
+              <img src="../src/assets/img/Desktop/CTA/CTA_Discord_CaSau.webp" alt=""
+                class="w-[30.3vw] absolute bottom-0 left-[2.5vw]">
+              <img src="../src/assets/img/Desktop/CTA/CTA_Discord.webp" alt=""
+                class="w-[43vw] absolute bottom-[-3.5vw]">
+            </div>
+            <div
+              class="w-full h-[12.72vw] bg-gradient-to-br from-[#E1F1FF] to-[#78B8FF] relative flex items-center justify-center">
+              <img src="../src/assets/img/Desktop/CTA/CTA_Facebook.webp" alt="" class="absolute w-[33.8vw]">
+            </div>
+            <img src="../src/assets/img/Desktop/CTA/CTA_Facebook_Blitzcrank.webp" alt=""
+              class="w-[21.3vw] absolute bottom-[-2vw] right-[4.3vw]">
+          </div>
+          <!-- Feedback -->
+          <div class="relative w-full h-auto flex flex-col items-center">
+            <img src="../src/assets/img/Desktop/CTA/CTA_O_tren.webp" alt="" class="w-full absolute top-0">
+          </div>
+        </div>
+
+        <!-- Feedback -->
+        <div class="absolute top-[227.5vw] w-full flex flex-col space-y-[4.63vw] items-center">
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Jake M</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Idle Arena is super chill and
+                addictive.<br /> Perfect for quick breaks!”</p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Emily R</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Love the graphics and easy
+                gameplay.<br />Great way to kill time.”</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Noah T</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Perfect for casual gaming.
+                Easy to pick up,<br /> hard to put down.”</p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Liam S</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Simple but fun, keeps me
+                coming back<br />every day.”</p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Sophie K.</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Great idle mechanics and
+                smooth controls.<br /> Totally recommend!”</p>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="w-[95vw] relative">
+            <img src="../src/assets/img/Desktop/CTA/CTA_Feedback.webp" alt="" class="w-full h-auto">
+            <div class="flex flex-col items-start absolute top-[9.93vw] left-[5.2vw]">
+              <div class="flex flex-row space-x-[2.5vw]">
+                <p class="text-[#1e1e1e] text-[5.55vw] font-emeritus leading-[5.55vw]">Olivia B.</p>
+                <div class="flex flex-row space-x-[1.5px]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                  <img src="../src/assets/img/Desktop/CTA/CTA_feedback_star.webp" alt="" class="w-[4.17vw] h-[4.17vw]">
+                </div>
+              </div>
+              <p class="mt-[2vw] text-[#1e1e1e] font-league text-[4.17vw] leading-[6vw]">“Fun game with nice
+                progression. Enjoy<br /> playing while multitasking.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- The bottom -->
+        <div class="absolute bottom-0 w-full h-auto flex flex-col items-center">
+          <img src="../src/assets/img/Desktop/CTA/CTA_Man_Last.webp" alt=""
+            class="w-[59.5vw] absolute bottom-[2.5vw] left-[14.76vw]">
+          <img src="../src/assets/img/Desktop/CTA/CTA_O_duoi.webp" alt="" class="w-full h-auto absolute bottom-0">
+        </div>
       </div>
     </div>
   </div>
@@ -708,7 +1080,6 @@ export default {
     const initialIsMobile = ref(isMobile.value);
 
     const selectedIndex = ref(0);
-    // import ảnh kiểu Vite để build ổn
     const adventure1 = new URL('../src/assets/img/Desktop/Adventure/adventure1.webp', import.meta.url).href;
     const adventure2 = new URL('../src/assets/img/Desktop/Adventure/adventure2.webp', import.meta.url).href;
     const adventure3 = new URL('../src/assets/img/Desktop/Adventure/adventure3.webp', import.meta.url).href;
@@ -748,7 +1119,7 @@ export default {
 
     const ringClass = (i) => selectedIndex.value === i ? 'ring-on' : 'ring-off';
 
-    const NAV_OFFSET_VW = 6.25; // chiều cao navbar theo vw
+    const NAV_OFFSET_VW = 6.25;
 
     const getOffsetPx = () => (NAV_OFFSET_VW / 100) * window.innerWidth;
 
