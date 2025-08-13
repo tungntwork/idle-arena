@@ -1051,7 +1051,7 @@
         </div>
 
         <!-- The bottom -->
-        <div class="absolute bottom-0 w-full h-auto flex flex-col items-center">
+        <div class="absolute bottom-0 w-full h-auto flex flex-col items-center a">
           <img src="../src/assets/img/Desktop/CTA/CTA_Man_Last.webp" alt=""
             class="w-[59.5vw] absolute bottom-[2.5vw] left-[14.76vw]">
           <img src="../src/assets/img/Desktop/CTA/CTA_O_duoi.webp" alt="" class="w-full h-auto absolute bottom-0">
