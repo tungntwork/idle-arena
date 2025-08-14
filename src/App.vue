@@ -925,7 +925,7 @@
       </div>
 
       <!-- Thẻ để chuyển - để lại làm 1 lượt -->
-      <div class="relative w-full h-[244vw] bg-white">
+      <div class="relative w-full h-[244vw] bg-white overflow-hidden">
         <!-- BACKGROUND LAYER -->
         <div class="absolute inset-0 z-0">
           <img v-for="(s, i) in slides" :key="'mbg-' + s.key" :src="mBackgroundMap[s.key].src"
