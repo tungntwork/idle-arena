@@ -801,11 +801,11 @@
           <div
             class="absolute w-[14.74vw] h-[2.6vw] rounded-[0.83vw] bg-[#272725] left-[22.76vw] top-[5.625vw] flex flex-row items-center justify-center space-x-[1.667vw]">
             <p class="text-[1.05vw] font-black font-inter text-[#FFF]">Join us on</p>
-            <img src="../src/assets/img/Desktop/FOOTER/FacebookIco.webp" alt="Facebook"
-              class="w-[1.25vw] h-[1.25vw] hover:cursor-pointer hover:scale-[1.3] transition-transform duration-300">
+            <img src="../src/assets/img/Desktop/CTA/Telegram2.png" alt="Facebook"
+              class="w-[1.2vw] h-[1.2vw] hover:cursor-pointer hover:scale-[1.3] translate-x-[0.2vw] transition-transform duration-300">
             <div class="w-[1.33px] h-[1.4vw] bg-[#565551]"></div>
-            <img src="../src/assets/img/Desktop/FOOTER/DiscordIco.webp" alt="Discord"
-              class="w-[1.25vw] h-[1.25vw] hover:cursor-pointer hover:scale-[1.3] transition-transform duration-300">
+            <img src="../src/assets/img/Desktop/CTA/telewhite.png" alt="Discord"
+              class="w-[1.25vw] h-[1.25vw] hover:cursor-pointer hover:scale-[1.3] translate-x-[-0.2vw] transition-transform duration-300">
           </div>
 
           <div class="w-[2px] h-[6.77vw] bg-[#898989] rounded-full absolute right-[32.91vw] top-[2.65625vw]"></div>
