@@ -69,7 +69,7 @@
           <img src="../src/assets/img/Desktop/HomePage/smoke-purple.webp" alt=""
             class="absolute scale-[1.2] top-[72.65625vw]">
           <!-- div after -->
-          <div class="absolute top-[52vw] flex flex-col items-center w-full">
+          <div ref="secFeatures" class="absolute top-[52vw] flex flex-col items-center w-full">
             <img src="../src/assets/img/Desktop/HomePage/ball.webp" alt=""
               class="absolute w-[7.4vw] top-[2.86vw] left-[37.7vw]">
             <img src="../src/assets/img/Desktop/HomePage/ball-1.webp" alt=""
@@ -128,7 +128,7 @@
         <!-- End Section 2 -->
 
         <!-- Section 3 -->
-        <div ref="secFeatures" class="relative w-full h-auto flex justify-center pb-[10vw]">
+        <div ref="secCampaign" class="relative w-full h-auto flex justify-center pb-[10vw]">
           <!-- Center -->
           <div class="w-[83vw] h-[33.5vw] relative">
             <img src="../src/assets/img/Desktop/Adventure/ADVENTURE_GIRL.webp" alt=""
@@ -189,7 +189,7 @@
         <!-- End Section 3 -->
 
         <!-- Section 4 -->
-        <div ref="secCharacters" class="relative w-full h-[49.167vw] flex justify-center overflow-hidden">
+        <div class="relative w-full h-[49.167vw] flex justify-center overflow-hidden">
           <!-- Back convert -->
           <div class="section-1 absolute w-[75vw] h-full left-0 transition-all duration-500 ease-in-out"
             :style="{ background: backGradient }"></div>
@@ -337,7 +337,7 @@
         <!-- End Section 4 -->
 
         <!-- Section 5 -->
-        <div ref="secCampaign" class="relative w-full h-[104.6vw] flex justify-center overflow-hidden bg-[#fffcec]">
+        <div ref="secCharacters" class="relative w-full h-[104.6vw] flex justify-center overflow-hidden bg-[#fffcec]">
           <img src="../src/assets/img/Desktop/ACTOR/ACTOR_Backdrop_1.webp" alt="" class="w-full h-auto absolute top-0">
           <img src="../src/assets/img/Desktop/ACTOR/ACTOR_Yellow_Wheel.webp" alt=""
             class="w-[42.5vw] absolute top-[-8.1vw] right-[-18vw]">
