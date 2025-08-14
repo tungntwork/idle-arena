@@ -535,7 +535,7 @@
               <!-- Logo Facebook -->
               <div
                 class="tele w-[12.45vw] absolute bottom-[1.7vw] right-[24vw] flex flex-row items-center hover:cursor-pointer hover:scale-[1.1] origin-center transition-transform duration-300 space-x-[0.6vw]">
-                <img src="../src/assets/img/Desktop/CTA/TelegramBlue.png" alt="" class="hover:cursor-pointer w-[3.6vw]">
+                <img src="../src/assets/img/Desktop/CTA/tele.webp" alt="" class="hover:cursor-pointer w-[3.6vw]">
                 <p class="text-[2.4vw] font-emeritus text-white" style="text-shadow: 0 0.05vw 0.3vw #ccc;">Telegram</p>
               </div>
             </div>
