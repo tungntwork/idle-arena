@@ -131,7 +131,7 @@
           <!-- Center -->
           <div class="w-[83vw] h-[33.5vw] relative">
             <img src="../src/assets/img/Desktop/Adventure/ADVENTURE_GIRL.webp" alt=""
-              class="w-[36vw] absolute top-[-4.5vw] left-[-2vw]">
+              class="w-[37vw] absolute top-[-5.3vw] left-[-2vw]">
             <div class="absolute top-[6.35vw] right-0 flex flex-col items-end space-y-[0.78125vw]">
               <p class="text-[#F9791C] text-[5.625vw] font-emeritus uppercase tracking-[-1.1%] leading-[5.625vw]">
                 Adventure</p>
