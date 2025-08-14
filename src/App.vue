@@ -131,8 +131,8 @@
         <div ref="secFeatures" class="relative w-full h-auto flex justify-center pb-[10vw]">
           <!-- Center -->
           <div class="w-[83vw] h-[33.5vw] relative">
-            <img src="../src/assets/img/Desktop/Adventure/human.webp" alt=""
-              class="w-[32.65625vw] absolute top-0 left-[5.4vw]">
+            <img src="../src/assets/img/Desktop/Adventure/ADVENTURE_GIRL.webp" alt=""
+              class="w-[32.65625vw] absolute top-0 left-[-2vw]">
             <div class="absolute top-[6.35vw] right-0 flex flex-col items-end space-y-[0.78125vw]">
               <p class="text-[#F9791C] text-[5.625vw] font-emeritus uppercase tracking-[-1.1%] leading-[5.625vw]">
                 Adventure</p>
@@ -189,7 +189,150 @@
         <!-- End Section 3 -->
 
         <!-- Section 4 -->
-        <div ref="secCharacters" class="">
+        <div ref="secCharacters" class="relative w-full h-[49.167vw] flex justify-center overflow-hidden">
+          <!-- Back convert -->
+          <div class="section-1 absolute w-[75vw] h-full left-0 transition-all duration-500 ease-in-out"
+            :style="{ background: backGradient }"></div>
+
+          <!-- Circle wheel rotate -->
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/circle.webp" class="w-[31.25vw] absolute left-[-5vw] bottom-[-9.6vw] origin-center circle-wheel-rotate
+         transition-transform duration-500 ease-in-out will-change-transform" :style="wheelStyle" />
+
+          <!-- Text back -->
+          <div class="absolute top-[6.64vw] left-[5.2vw] w-[60vw] overflow-hidden">
+            <div class="flex will-change-transform transition-transform duration-500 ease-in-out"
+              :style="{ transform: `translateX(-${current * 60}vw)` }">
+              <p class="text-[17.4vw] w-[60vw] min-w-[60vw] shrink-0 font-emeritus uppercase leading-[15vw]"
+                style="background: linear-gradient(180deg, #FFFFFF 0%, #FFB5CB 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; opacity:.3;">
+                YUMI
+              </p>
+              <p class="text-[17.4vw] w-[60vw] min-w-[60vw] shrink-0 font-emeritus uppercase leading-[15vw]"
+                style="background: linear-gradient(180deg, #FFFFFF 0%, #8ED7FF 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; opacity:.3;">
+                ZAT
+              </p>
+              <p class="text-[17.4vw] w-[60vw] min-w-[60vw] shrink-0 font-emeritus uppercase leading-[15vw]"
+                style="background: linear-gradient(180deg, #FFFFFF 0%, #FAE36B 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; opacity:.3;">
+                KONG
+              </p>
+              <p class="text-[17.4vw] w-[60vw] min-w-[60vw] shrink-0 font-emeritus uppercase leading-[15vw]"
+                style="background: linear-gradient(180deg, #FFFFFF 0%, #F06868 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; opacity:.3;">
+                LUCIAN
+              </p>
+              <p class="text-[17.4vw] w-[60vw] min-w-[60vw] shrink-0 font-emeritus uppercase leading-[15vw]"
+                style="background: linear-gradient(180deg, #FFFFFF 0%, #5CFFC6 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; opacity:.3;">
+                KRYSUS
+              </p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <img :src="cardSrc" :style="cardStyle"
+            class="absolute pointer-events-none select-none will-change-transform" />
+
+          <!-- Layer -->
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/layer_backnet.webp" alt=""
+            class="h-full absolute bottom-0 right-0">
+
+          <!-- Line color -->
+          <div class="w-[36.63vw] absolute top-[20.67vw] left-[25vw]">
+            <img src="../src/assets/img/Desktop/CHARACTER_WEBP/nametag.webp" alt="">
+            <div class="absolute top-0 left-0 w-[36.63vw]">
+              <div class="h-[0.364vw] w-[27.24vw] transition-colors duration-500"
+                :style="{ backgroundColor: line1Color }"></div>
+            </div>
+            <p class="text-[#1e1e1e] text-[3.18vw] font-league font-bold leading-[2.25vw] tracking-[-1.1%]
+            absolute bottom-[-0.3vw] left-0">
+              {{ slides[current].subtitle }}
+            </p>
+          </div>
+
+          <!-- Detail -->
+          <div class="absolute flex flex-row top-[31.25vw] left-[25vw] space-x-[0.78125vw]">
+            <!-- Health -->
+            <div class="flex flex-row items-center space-x-[0.3vw]">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/HEART.webp" alt="" class="w-[1.884vw] h-auto">
+              <div class="flex flex-col items-start">
+                <p class="font-emeritus text-[1.52vw] leading-[1.2vw] tracking-[-1.1%] text-[#1e1e1e]">620</p>
+                <p class="font-league text-[#1e1e1e] leading-[1vw] text-[1.12vw]">Health</p>
+              </div>
+            </div>
+            <!-- Attack -->
+            <div class="flex flex-row items-center space-x-[0.3vw]">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/ATTACK.webp" alt="" class="w-[1.884vw] h-auto">
+              <div class="flex flex-col items-start">
+                <p class="font-emeritus text-[1.52vw] leading-[1.2vw] tracking-[-1.1%] text-[#1e1e1e]">78</p>
+                <p class="font-league text-[#1e1e1e] leading-[1vw] text-[1.12vw]">Attack</p>
+              </div>
+            </div>
+            <!-- Amor -->
+            <div class="flex flex-row items-center space-x-[0.3vw]">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/GUARD.webp" alt="" class="w-[1.884vw] h-auto">
+              <div class="flex flex-col items-start">
+                <p class="font-emeritus text-[1.52vw] leading-[1.2vw] tracking-[-1.1%] text-[#1e1e1e]">14</p>
+                <p class="font-league text-[#1e1e1e] leading-[1vw] text-[1.12vw]">Amor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- BackCover -->
+
+          <div class="absolute right-0 top-0" :style="[
+            { width: STAGE_W, height: STAGE_H, overflow: 'hidden' },
+            revealMaskStyle
+          ]">
+            <div v-for="(s, i) in slides" :key="`back-${s.key}`"
+              class="absolute pointer-events-none will-change-transform actor-slot" :style="backCoverWrapStyleFor(i)"
+              :class="actorSlotClass(i)">
+              <img :src="backCoverMap[s.key].src" :style="backCoverImgStyleFor(i)"
+                class="block select-none pointer-events-none backdrop-blur-[1vw]" draggable="false" />
+            </div>
+          </div>
+
+          <!-- blur layer -->
+          <div class="absolute w-[8.90625vw] h-[20.98vw] right-[14.43vw] top-[19.0625vw]
+         rounded-[50%] blur-[15.625vw] z-10 transition-colors duration-500" :style="{ backgroundColor: glowColor }">
+          </div>
+
+
+          <!-- Rectangle right -->
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/RectangleVLpng.webp" alt=""
+            class="absolute h-[50.5vw] bottom-0 right-[0vw] z-30">
+
+          <!-- Actor -->
+          <div class="absolute right-0 top-0 w-[52.08vw] h-[49.167vw] overflow-hidden">
+            <div v-for="(s, i) in slides" :key="s.key"
+              class="absolute pointer-events-none will-change-transform actor-slot" :style="actorWrapStyleFor(i)"
+              :class="actorSlotClass(i)">
+              <img :src="actorMap[s.key].src" :style="actorImgStyleFor(i)"
+                class="block w-full select-none pointer-events-none" draggable="false" />
+            </div>
+          </div>
+
+          <!-- Skill -->
+          <div class="absolute w-[20vw] top-[26.3vw] left-[25vw] overflow-hidden z-10">
+            <div class="flex will-change-transform transition-transform duration-500 ease-in-out"
+              :style="{ transform: `translateX(-${current * 20}vw)` }">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/yumiskill.webp" class="w-[20vw] shrink-0">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/zatskills.webp" class="w-[20vw] shrink-0">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/kongyoluwebp.webp" class="w-[20vw] shrink-0">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/zatskill.webp" class="w-[20vw] shrink-0">
+              <img src="../src/assets/img/Desktop/CHARACTER_WEBP/krysusskills.webp" class="w-[20vw] shrink-0">
+            </div>
+          </div>
+
+          <!-- button -->
+          <div class="absolute w-[26.58vw] flex justify-between right-[12.54vw] bottom-[4.887vw] z-30">
+            <img src="../src/assets/img/Desktop/CHARACTER_WEBP/buttonleft.webp" class="w-[2.72vw] transition"
+              :class="canPrev ? 'hover:cursor-pointer' : 'grayscale opacity-50 cursor-not-allowed pointer-events-none'"
+              @click="prev" :aria-disabled="!canPrev" />
+            <img src="../src/assets/img/Desktop/CHARACTER_WEBP/buttonright.webp" class="w-[2.72vw] transition"
+              :class="canNext ? 'hover:cursor-pointer' : 'grayscale opacity-50 cursor-not-allowed pointer-events-none'"
+              @click="next" :aria-disabled="!canNext" />
+          </div>
+
+          <!-- Score -->
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/level.webp" alt=""
+            class="w-[11.3vw] absolute top-[34.375vw] left-[25vw]">
         </div>
         <!-- End Section 4 -->
 
@@ -597,7 +740,7 @@
         <!-- End Section 6 -->
 
         <!-- Footer -->
-        <div class="relative w-full h-auto flex flex-col items-center bg-[#fffcec]">
+        <div class="relative w-full h-auto flex flex-col items-center bg-[#D5D5D5]">
           <div
             class="w-[13.18vw] absolute top-0 right-[13.02vw] flex justify-center items-center text-[#FFF] font-league text-[1.45vw] z-0">
             <img src="../src/assets/img/Desktop/FOOTER/TheTag.webp" alt="" class="w-full">
@@ -685,6 +828,7 @@
     <div v-if="isMobile" class="w=full h-auto">
       <div class="relative w-full h-[865vw] flex flex-col bg-[#D5D5D5] items-center">
         <!-- Đoạn này để back vàng -->
+        <img src="../src/assets/img/Mobile/Homepage/lightvang.webp" alt="" class="absolute top-0 left-0 w-full h-auto">
         <img src="../src/assets/img/Mobile/Homepage/ImgLeftHome.webp" alt=""
           class="w-[68.7vw] absolute top-[25.4vw] left-0">
         <img src="../src/assets/img/Mobile/Homepage/ImgRightHome.webp" alt=""
@@ -732,6 +876,9 @@
           <!-- purple smoke -->
           <img src="../src/assets/img/Mobile/Conquer/ConquerPurpleSmoke.webp" alt=""
             class="w-full h-auto absolute bottom-0">
+
+          <img src="../src/assets/img/Mobile/Adventure/boardgame.webp" alt=""
+            class="w-full h-auto absolute bottom-[-15vw]">
         </div>
 
         <div
@@ -778,7 +925,42 @@
       </div>
 
       <!-- Thẻ để chuyển - để lại làm 1 lượt -->
-      <div class="relative w-full h-[244.3vw] bg-white"></div>
+      <div class="relative w-full h-[244vw] bg-white">
+        <!-- BACKGROUND LAYER -->
+        <div class="absolute inset-0 z-0">
+          <img v-for="(s, i) in slides" :key="'mbg-' + s.key" :src="mBackgroundMap[s.key].src"
+            class="w-full h-auto absolute left-0 top-0 background-img-mobile m-layer" :class="mStateClass(i)"
+            draggable="false" />
+        </div>
+
+        <!-- MODEL LAYER -->
+        <div class="absolute inset-0 z-10">
+          <img v-for="(s, i) in slides" :key="'mmodel-' + s.key" :src="mModelMap[s.key].src"
+            class="absolute m-layer model-img-mobile" :style="mModelStyleFor(i)" :class="mStateClass(i)"
+            draggable="false" />
+        </div>
+
+        <!-- SKILL LAYER -->
+        <div class="absolute inset-x-0 bottom-[9.16vw] z-20">
+          <img v-for="(s, i) in slides" :key="'mskill-' + s.key" :src="mSkillMap[s.key].src"
+            class="w-full h-auto absolute left-0 bottom-0 m-layer skill" :class="mStateClass(i)" draggable="false" />
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="absolute top-[148vw] right-[6.615vw] flex flex-row w-[53.43vw] justify-between z-30 px-[2vw]">
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/buttonleft.webp" class="w-[7.6vw] h-auto transition"
+            :class="mCanPrev ? 'hover:cursor-pointer' : 'grayscale opacity-50 pointer-events-none'" @click="mPrev"
+            :aria-disabled="!mCanPrev" />
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/buttonright.webp" class="w-[7.6vw] h-auto transition"
+            :class="mCanNext ? 'hover:cursor-pointer' : 'grayscale opacity-50 pointer-events-none'" @click="mNext"
+            :aria-disabled="!mCanNext" />
+        </div>
+
+        <!-- BUTTON BOOKING -->
+        <div class="absolute top-[175.06vw] w-full h-auto flex items-center justify-center">
+          <img src="../src/assets/img/Desktop/CHARACTER_WEBP/level.webp" alt="" class="w-[55.2vw] h-auto">
+        </div>
+      </div>
 
       <!-- 5 actors -->
       <div class="relative w-full h-[440vw] bg-[#FFFAEB]">
@@ -1051,7 +1233,7 @@
         </div>
 
         <!-- The bottom -->
-        <div class="absolute bottom-0 w-full h-auto flex flex-col items-center a">
+        <div class="absolute bottom-0 w-full h-auto flex flex-col items-center">
           <img src="../src/assets/img/Desktop/CTA/CTA_Man_Last.webp" alt=""
             class="w-[59.5vw] absolute bottom-[2.5vw] left-[14.76vw]">
           <img src="../src/assets/img/Desktop/CTA/CTA_O_duoi.webp" alt="" class="w-full h-auto absolute bottom-0">
@@ -1065,8 +1247,6 @@
 // import lib
 import { ref, onMounted, computed, onBeforeUnmount } from "vue";
 import Lenis from "@studio-freight/lenis";
-
-// import desktop, mobile
 
 // export
 export default {
@@ -1093,6 +1273,12 @@ export default {
     const secCommunity = ref(null);
     const secContact = ref(null);
 
+    const STAGE_W = '26vw';
+    const STAGE_H = '49.167vw';
+
+    const glowColors = ['#FF91B2', '#5AC5FF', '#FCE671', '#FF0000', '#00FF9A'];
+    const glowColor = computed(() => glowColors[current.value]);
+
     const handleResize = () => {
       windowWidth.value = window.innerWidth;
       if (isMobile.value !== initialIsMobile.value) {
@@ -1101,7 +1287,166 @@ export default {
       }
     };
 
-    const selectThumb = (i) => { if (selectedIndex.value !== i) selectedIndex.value = i; };
+    const actorMap = {
+      yumi: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/yumimodel.webp', import.meta.url).href,
+        width: '40.8vw', right: '12vw', bottom: '-7.5vw',
+        offsetY: '0vw',
+        enterFrom: '0vw',
+      },
+      zat: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/zatmodel.webp', import.meta.url).href,
+        width: '35.4vw', right: '4.43vw', bottom: '-10vw',
+        offsetY: '0vw',
+        enterFrom: '0vw',
+      },
+      kong: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/kongyolumodel.webp', import.meta.url).href,
+        width: '41.145vw', right: '1.51vw', bottom: '-7vw', offsetY: '0vw',
+        enterFrom: '0vw',
+      },
+      ivy: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/lucianmodel.webp', import.meta.url).href,
+        width: '36.146vw', right: '2.96875vw', bottom: '-8vw', offsetY: '0vw',
+        enterFrom: '0vw',
+      },
+      drax: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/krysysmodel.webp', import.meta.url).href,
+        width: '18.073vw', right: '18.646vw', bottom: '-5vw', offsetY: '0vw',
+        enterFrom: '0vw',
+      },
+    };
+
+    const current = ref(0);
+
+    const slides = [
+      { key: "yumi", subtitle: "The Crazed Cleaver" },
+      { key: "zat", subtitle: "Wicked Bombardier" },
+      { key: "kong", subtitle: "Millenium Beast" },
+      { key: "ivy", subtitle: "The Hope Guardian" },
+      { key: "drax", subtitle: "The Unyielding Flame" },
+    ];
+
+    const backGradients = [
+      'linear-gradient(135deg, #FF99B8 0%, #F6CCD9 100%)', // YUMI
+      'linear-gradient(135deg, #9AD7FF 0%, #D0EEFF 100%)', // ZAT
+      'linear-gradient(135deg, #FFDE7A 0%, #FFF2B2 100%)', // KONG
+      'linear-gradient(135deg, #FF7F7F 0%, #D13737 100%)', // 4
+      'linear-gradient(135deg, #00FF98 0%, #86FFE4 100%)', // 5
+    ];
+
+    const line1Colors = ['#FF71AC', '#4EC3FF', '#FFB200', '#FF0000', '#007E52']
+
+    const actorImages = [
+      new URL('../src/assets/img/Desktop/CHARACTER_WEBP/yumimodel.webp', import.meta.url).href,
+      new URL('../src/assets/img/Desktop/CHARACTER_WEBP/zatmodel.webp', import.meta.url).href,
+      new URL('../src/assets/img/Desktop/CHARACTER_WEBP/kongyolumodel.webp', import.meta.url).href,
+      new URL('../src/assets/img/Desktop/CHARACTER_WEBP/lucianmodel.webp', import.meta.url).href,
+      new URL('../src/assets/img/Desktop/CHARACTER_WEBP/krysysmodel.webp', import.meta.url).href,
+    ];
+
+    const backCoverMap = {
+      yumi: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/YumiCover.webp', import.meta.url).href,
+        top: '0', right: '0', height: STAGE_H,
+        offsetX: '0', offsetY: '0', scale: 1, rotate: '0deg',
+      },
+      zat: { src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/ZatCover.webp', import.meta.url).href, top: '0', right: '0', height: STAGE_H },
+      kong: { src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/KongYoluCover.webp', import.meta.url).href, top: '0', right: '0', height: STAGE_H },
+      ivy: { src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/LucianCover.webp', import.meta.url).href, top: '0', right: '0', height: STAGE_H },
+      drax: { src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/KrysusCover.webp', import.meta.url).href, top: '0', right: '0', height: STAGE_H },
+    };
+
+    const actorOffsets = ['0vw', '-1vw', '1vw', '0.5vw', '-0.75vw'];
+
+    // Tính toán binding
+    const backGradient = computed(() => backGradients[current.value])
+    const line1Color = computed(() => line1Colors[current.value])
+    const actorOffset = computed(() => actorOffsets[current.value])
+
+    const backCoverWrapStyleFor = (i) => {
+      const c = backCoverMap[slides[i].key] || {};
+      return {
+        position: 'absolute',
+        top: c.top ?? '0',
+        right: c.right ?? '0',
+        left: 'auto',
+        bottom: 'auto',
+        height: c.height ?? STAGE_H,
+        width: 'auto',            // h-full, w-auto
+      };
+    };
+
+    const backCoverImgStyleFor = (i) => {
+      const c = backCoverMap[slides[i].key] || {};
+      const tx = c.imgTranslateX ?? c.offsetX ?? '0';
+      const ty = c.imgTranslateY ?? c.offsetY ?? '0';
+      const sc = c.imgScale ?? c.scale ?? 1;
+      const rot = c.imgRotate ?? c.rotate ?? '0deg';
+      return {
+        transform: `translate(${tx}, ${ty}) scale(${sc}) rotate(${rot})`,
+        height: '100%',           // h-full
+        width: 'auto',            // giữ tỉ lệ, bám theo height
+      };
+    };
+
+    // Text back offset
+    const textOffset = computed(() => `-${current.value * 60}vw`)
+
+    function next() {
+      if (!canNext.value) return;
+      goTo(current.value + 1);
+    }
+    function prev() {
+      if (!canPrev.value) return;
+      goTo(current.value - 1);
+    }
+
+    const actorWrapStyleFor = (i) => {
+      const c = actorMap[slides[i].key] || {};
+      const style = {
+        width: c.width || '40vw',
+        height: '49.167vw',
+      };
+
+      if (c.left != null) { style.left = c.left; style.right = 'auto'; }
+      else { style.right = c.right ?? '10vw'; style.left = 'auto'; }
+
+      if (c.top != null) { style.top = c.top; style.bottom = 'auto'; }
+      else { style.bottom = c.bottom ?? '0vw'; style.top = 'auto'; }
+
+      if (c.slotTransform) style.transform = c.slotTransform;
+      return style;
+    };
+
+    const actorImgStyleFor = (i) => {
+      const c = actorMap[slides[i].key] || {};
+      const tx = c.imgTranslateX ?? c.offsetX ?? '0';
+      const ty = c.imgTranslateY ?? c.offsetY ?? '0';
+      const sc = c.imgScale ?? c.scale ?? 1;
+      const rot = c.imgRotate ?? c.rotate ?? '0deg';
+      return {
+        transform: `translate(${tx}, ${ty}) scale(${sc}) rotate(${rot})`,
+        width: '100%'
+      };
+    };
+
+    const actorSlotClass = (i) => {
+      if (isAnimating.value) {
+        if (i === prevIndex.value) {
+          return direction.value === 'up' ? 'anim-up-out' : 'anim-down-out';
+        }
+        if (i === current.value) {
+          return direction.value === 'up' ? 'anim-up-in' : 'anim-down-in';
+        }
+        return 'hidden-slot';
+      }
+      return i === current.value ? 'shown-slot' : 'hidden-slot';
+    };
+
+    const selectThumb = (i) => {
+      if (selectedIndex.value !== i) selectedIndex.value = i
+    };
 
     const basisStyle = (i) => ({
       '--basis': selectedIndex.value === i ? '32.6vw' : '12.08vw',
@@ -1145,6 +1490,158 @@ export default {
       }
     };
 
+    const cardMap = {
+      yumi: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/yumicard.webp', import.meta.url).href,
+        width: '20.15625vw', left: '5.2vw', bottom: '4.375vw', rotate: '0deg',
+      },
+      zat: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/zatcard.webp', import.meta.url).href,
+        width: '20.15625vw', left: '5.2vw', bottom: '4.375vw', rotate: '0deg',
+      },
+      kong: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/kongyolu.webp', import.meta.url).href,
+        width: '20.15625vw', left: '5.2vw', bottom: '4.375vw', rotate: '0deg',
+      },
+      ivy: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/lucian.webp', import.meta.url).href,
+        width: '20.15625vw', left: '5.2vw', bottom: '4.375vw', rotate: '0deg',
+      },
+      drax: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/krysus.webp', import.meta.url).href,
+        width: '20.15625vw', left: '5.2vw', bottom: '4.375vw', rotate: '0deg',
+      },
+    };
+
+    const revealMaskStyle = {
+      WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%)',
+      maskImage: 'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%)',
+      WebkitMaskRepeat: 'no-repeat',
+      maskRepeat: 'no-repeat',
+      WebkitMaskSize: '100% 100%',
+      maskSize: '100% 100%',
+    };
+
+    const actorWrapStyle = computed(() => {
+      const c = actorMap[currentKey.value] || {};
+      return {
+        width: c.width || '40vw',
+        right: c.right || '10vw',
+        bottom: c.bottom || '0vw',
+      };
+    });
+
+    const actorImgStyle = computed(() => {
+      const c = actorMap[currentKey.value] || {};
+      const t = [
+        c.offsetX && `translateX(${c.offsetX})`,
+        c.offsetY && `translateY(${c.offsetY})`,
+        c.scale && `scale(${c.scale})`,
+        c.rotate && `rotate(${c.rotate})`,
+      ].filter(Boolean).join(' ') || 'none';
+      return { transform: t, width: '100%' };
+    });
+
+    const cardSrc = computed(() => cardMap[currentKey.value]?.src || '');
+    const cardStyle = computed(() => {
+      const c = cardMap[currentKey.value] || {};
+      return {
+        width: c.width ?? '20.15625vw',
+        left: c.left ?? '5.2vw',
+        bottom: c.bottom ?? '4.375vw',
+        transform: `translateZ(0) rotate(${c.rotate ?? '0deg'})`,
+      };
+    });
+
+    const wheelDeg = ref(0);
+    const wheelStyle = computed(() => ({
+      transform: `rotate(${wheelDeg.value}deg)`
+    }));
+
+    // Block turn right - left
+    const canPrev = computed(() => current.value > 0);
+    const canNext = computed(() => current.value < slides.length - 1);
+
+    const prevIndex = ref(0);
+    const direction = ref('up');
+    const isAnimating = ref(false);
+    const ANIM_MS = 1200;
+
+    const goTo = (i) => {
+      if (i < 0 || i > slides.length - 1) return;
+      if (i === current.value) return;
+      if (isAnimating.value) return;
+
+      prevIndex.value = current.value;
+      direction.value = i > current.value ? 'down' : 'up';
+      current.value = i;
+      isAnimating.value = true;
+
+      wheelDeg.value = (wheelDeg.value + (prevIndex.value - i) * 20) % 360;
+
+      setTimeout(() => { isAnimating.value = false; }, ANIM_MS);
+    };
+
+    // --- MOBILE SLIDER STATE ---
+    const mCurrent = ref(0);
+    const mCanPrev = computed(() => mCurrent.value > 0);
+    const mCanNext = computed(() => mCurrent.value < slides.length - 1);
+    const mPrev = () => { if (mCanPrev.value) mCurrent.value--; };
+    const mNext = () => { if (mCanNext.value) mCurrent.value++; };
+
+    const mStateClass = (i) => (i === mCurrent.value ? 'm-show' : 'm-hide');
+
+    // Backgrounds (đổi src theo tên file bạn có; tránh khoảng trắng trong file name)
+    const mBackgroundMap = {
+      yumi: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/backyumi .webp', import.meta.url).href },
+      zat: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/backzat.webp', import.meta.url).href },
+      kong: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/backkongyolu.webp', import.meta.url).href },
+      ivy: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/backlucian.webp', import.meta.url).href },
+      drax: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/backkrysus.webp', import.meta.url).href },
+    };
+
+    // Models (giữ “đặc tính riêng” từng model: width/top/left)
+    const mModelMap = {
+      yumi: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/yumimodel.webp', import.meta.url).href,
+        style: { width: '110.8vw', top: '46.06vw', left: '-14.3vw' }
+      },
+      zat: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/zatmodel.webp', import.meta.url).href,
+        style: { width: '93.13vw', top: '54.2vw', left: '6.3vw' }
+      },
+      kong: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/kongyolumodel.webp', import.meta.url).href,
+        style: { width: '107vw', top: '51.65vw', left: '15.8vw' }
+      },
+      ivy: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/lucianmodel.webp', import.meta.url).href,
+        style: { width: '88.2vw', top: '53.2vw', left: '10.18vw' }
+      },
+      drax: {
+        src: new URL('../src/assets/img/Desktop/CHARACTER_WEBP/krysysmodel.webp', import.meta.url).href,
+        style: { width: '46.05vw', top: '46.82vw', left: '29.5vw' }
+      },
+    };
+
+    const mModelStyleFor = (i) => {
+      const c = mModelMap[slides[i].key] || {};
+      return {
+        ...c.style,
+        transform: 'translate3d(0,0,0)', // bật GPU
+      };
+    };
+
+    // Skills (đổi đường dẫn nếu bạn để tên khác ở mobile)
+    const mSkillMap = {
+      yumi: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/yumiskills.webp', import.meta.url).href },
+      zat: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/zatskills.webp', import.meta.url).href },
+      kong: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/kongyoluskills.webp', import.meta.url).href },
+      ivy: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/lucianskills.webp', import.meta.url).href },
+      drax: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/krysusskill.webp', import.meta.url).href },
+    };
+
+
     // Check when change width
     onMounted(() => {
       window.addEventListener("resize", handleResize);
@@ -1163,6 +1660,10 @@ export default {
       }
       requestAnimationFrame(raf);
     });
+
+    const currentKey = computed(() => slides[current.value].key);
+
+    const actorSrc = computed(() => actorMap[currentKey.value]?.src || '');
 
     onBeforeUnmount(() => {
       if (lenis) {
@@ -1193,6 +1694,50 @@ export default {
       secCommunity,
       secContact,
       scrollToRef,
+      backGradient,
+      line1Color,
+      actorSrc,
+      actorOffset,
+      textOffset,
+      next,
+      prev,
+      current,
+      slides,
+      // actorStyle,
+      actorImages,
+      cardSrc,
+      cardStyle,
+      wheelStyle,
+      canPrev,
+      canNext,
+      actorWrapStyle,
+      actorImgStyle,
+      actorMap,
+      prevIndex,
+      direction,
+      isAnimating,
+      goTo,
+      actorWrapStyleFor,
+      actorImgStyleFor,
+      actorSlotClass,
+      glowColors,
+      glowColor,
+      STAGE_W,
+      STAGE_H,
+      backCoverWrapStyleFor,
+      backCoverImgStyleFor,
+      backCoverMap,
+      revealMaskStyle,
+      mCurrent,
+      mCanPrev,
+      mCanNext,
+      mPrev,
+      mNext,
+      mStateClass,
+      mBackgroundMap,
+      mModelMap,
+      mModelStyleFor,
+      mSkillMap,
     };
   },
   components: {
@@ -1255,22 +1800,6 @@ export default {
 body {
   background-color: #171717;
 }
-
-/* html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  overflow-y: scroll;
-  height: auto;
-  overflow: hidden;
-  scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-} */
 
 html,
 body {
@@ -1346,4 +1875,183 @@ html::-webkit-scrollbar {
 .button-hover:hover .overlay-hidden {
   opacity: 1;
 }
+
+.actor-rise-enter-from {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+}
+
+.actor-rise-enter-to {
+  transform: translate3d(0, 0%, 0);
+  opacity: 1;
+}
+
+.actor-rise-leave-from {
+  transform: translate3d(0, 0%, 0);
+  opacity: 1;
+}
+
+.actor-rise-leave-to {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+}
+
+.actor-rise-enter-active,
+.actor-rise-leave-active {
+  transition: transform 2s cubic-bezier(.22, 1, .36, 1), opacity 2s cubic-bezier(.22, 1, .36, 1);
+  will-change: transform, opacity;
+}
+
+.actor-rise-enter-active {
+  z-index: 2;
+}
+
+.actor-rise-leave-active {
+  z-index: 1;
+  position: absolute;
+}
+
+/* Optional: tôn trọng người dùng giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+
+  .actor-rise-enter-active,
+  .actor-rise-leave-active {
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Base: slot ẩn mặc định */
+.actor-slot {
+  position: absolute;
+}
+
+/* Trạng thái nghỉ */
+.shown-slot {
+  display: block;
+  opacity: 1;
+  transform: none;
+  z-index: 2;
+}
+
+.hidden-slot {
+  display: none;
+  opacity: 0;
+  transform: translateY(100%);
+  /* không quan trọng khi display:none */
+}
+
+/* Keyframes theo hướng */
+@keyframes slideUpIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideDownIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Lớp animation áp cho 2 slot tham gia chuyển cảnh */
+.anim-up-in,
+.anim-up-out,
+.anim-down-in,
+.anim-down-out {
+  display: block;
+  /* phải hiện để animate */
+  animation-duration: 1200ms;
+  /* khớp ANIM_MS */
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+
+.anim-up-in {
+  animation-name: slideUpIn;
+  z-index: 2;
+}
+
+.anim-up-out {
+  animation-name: slideUpOut;
+  z-index: 1;
+}
+
+.anim-down-in {
+  animation-name: slideDownIn;
+  z-index: 2;
+}
+
+.anim-down-out {
+  animation-name: slideDownOut;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .anim-up-in,
+  .anim-up-out,
+  .anim-down-in,
+  .anim-down-out {
+    animation-duration: .01ms !important;
+  }
+}
+
+/* Cross-fade 0.7s cho 3 lớp: background / model / skill */
+.m-layer {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(.2, .7, .2, 1);
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.m-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.m-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.model-img-mobile {}
 </style>
