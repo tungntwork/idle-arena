@@ -275,16 +275,11 @@
 
           <!-- BackCover -->
 
-          <div class="absolute right-0 top-0" :style="[
-            { width: STAGE_W, height: STAGE_H, overflow: 'hidden' },
-            revealMaskStyle
-          ]">
-            <div v-for="(s, i) in slides" :key="`back-${s.key}`"
-              class="absolute pointer-events-none will-change-transform actor-slot" :style="backCoverWrapStyleFor(i)"
-              :class="actorSlotClass(i)">
-              <img :src="backCoverMap[s.key].src" :style="backCoverImgStyleFor(i)"
-                class="block select-none pointer-events-none backdrop-blur-[1vw]" draggable="false" />
-            </div>
+          <div v-for="(s, i) in slides" :key="`back-${s.key}`"
+            class="absolute pointer-events-none will-change-transform actor-slot" :style="backCoverWrapStyleFor(i)"
+            :class="backCoverSlotClass(i)">
+            <img :src="backCoverMap[s.key].src" :style="[backCoverImgStyleFor(i), revealMaskStyle]"
+              class="block select-none pointer-events-none backdrop-blur-[1vw]" draggable="false" />
           </div>
 
           <!-- blur layer -->
@@ -524,14 +519,25 @@
               <img src="../src/assets/img/Desktop/CTA/CTA_Discord_CaSau.webp" alt=""
                 class="w-[16.51vw] absolute bottom-0 left-[2.5vw]">
               <!-- Logo Discord -->
-              <img src="../src/assets/img/Desktop/CTA/CTA_Discord.webp" alt=""
-                class="h-[7.39vw] left-[18.125vw] absolute bottom-0 hover:cursor-pointer">
+              <div
+                class="x left-[23vw] absolute bottom-[2vw] flex flex-row items-center space-x-[0.6vw] hover:cursor-pointer hover:scale-[1.1] origin-center transition-transform duration-300">
+                <img src="../src/assets/img/Desktop/CTA/Telegram2.png" alt="" class=" w-[3vw]">
+                <div class="flex flex-col items-start h-[2.8vw] justify-between">
+                  <p class="text-[#FFF] text-[1.2vw] font-league leading-[1.2vw] font-bold">
+                    Join us on
+                  </p>
+                  <p class="text-[#FFF] text-[2.4vw] font-emeritus leading-[2.4vw] translate-y-[-0.3vw]">Twitter</p>
+                </div>
+              </div>
               <!-- Blitcrank -->
               <img src="../src/assets/img/Desktop/CTA/CTA_Facebook_Blitzcrank.webp" alt=""
                 class="w-[11.61vw] absolute right-[2.343675vw] bottom-[-1vw]">
               <!-- Logo Facebook -->
-              <img src="../src/assets/img/Desktop/CTA/CTA_Facebook.webp" alt=""
-                class="w-[12.45vw] absolute bottom-[2.1875vw] right-[21vw] hover:cursor-pointer">
+              <div
+                class="tele w-[12.45vw] absolute bottom-[1.7vw] right-[24vw] flex flex-row items-center hover:cursor-pointer hover:scale-[1.1] origin-center transition-transform duration-300 space-x-[0.6vw]">
+                <img src="../src/assets/img/Desktop/CTA/TelegramBlue.png" alt="" class="hover:cursor-pointer w-[3.6vw]">
+                <p class="text-[2.4vw] font-emeritus text-white" style="text-shadow: 0 0.05vw 0.3vw #ccc;">Telegram</p>
+              </div>
             </div>
           </div>
 
@@ -1411,7 +1417,7 @@ export default {
         left: 'auto',
         bottom: 'auto',
         height: c.height ?? STAGE_H,
-        width: 'auto',            // h-full, w-auto
+        width: 'auto',
       };
     };
 
@@ -1423,8 +1429,8 @@ export default {
       const rot = c.imgRotate ?? c.rotate ?? '0deg';
       return {
         transform: `translate(${tx}, ${ty}) scale(${sc}) rotate(${rot})`,
-        height: '100%',           // h-full
-        width: 'auto',            // giữ tỉ lệ, bám theo height
+        height: '100%',
+        width: 'auto',
       };
     };
 
@@ -1662,15 +1668,28 @@ export default {
       },
     };
 
+    const backCoverSlotClass = (i) => {
+      if (isAnimating.value) {
+        if (i === prevIndex.value) {
+          return direction.value === 'up' ? 'anim-up-out-delay' : 'anim-down-out-delay';
+        }
+        if (i === current.value) {
+          return direction.value === 'up' ? 'anim-up-in-delay' : 'anim-down-in-delay';
+        }
+        return 'hidden-slot';
+      }
+      return i === current.value ? 'shown-slot' : 'hidden-slot';
+    };
+
     const mModelStyleFor = (i) => {
       const c = mModelMap[slides[i].key] || {};
       return {
         ...c.style,
-        transform: 'translate3d(0,0,0)', // bật GPU
+        transform: 'translate3d(0,0,0)',
       };
     };
 
-    // Skills (đổi đường dẫn nếu bạn để tên khác ở mobile)
+    // Skills
     const mSkillMap = {
       yumi: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/yumiskills.webp', import.meta.url).href },
       zat: { src: new URL('../src/assets/img/Mobile/CHARACTER_MOBILE_WEBP/zatskills.webp', import.meta.url).href },
@@ -1689,7 +1708,6 @@ export default {
         destroyLenis();
       }
     });
-
 
     const currentKey = computed(() => slides[current.value].key);
 
@@ -1780,6 +1798,7 @@ export default {
       mModelMap,
       mModelStyleFor,
       mSkillMap,
+      backCoverSlotClass
     };
   },
   components: {
@@ -2104,4 +2123,47 @@ html::-webkit-scrollbar {
 }
 
 .model-img-mobile {}
+
+.anim-up-in-delay {
+  animation-name: slideUpIn;
+  animation-duration: 1200ms;
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+.anim-up-out-delay {
+  animation-name: slideUpOut;
+  animation-duration: 1200ms;
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.anim-down-in-delay {
+  animation-name: slideDownIn;
+  animation-duration: 1200ms;
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+.anim-down-out-delay {
+  animation-name: slideDownOut;
+  animation-duration: 1200ms;
+  animation-timing-function: cubic-bezier(.22, 1, .36, 1);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+  z-index: 1;
+}
+
+.anim-up-in-delay,
+.anim-up-out-delay,
+.anim-down-in-delay,
+.anim-down-out-delay {
+  animation-duration: 1700ms;
+}
 </style>
