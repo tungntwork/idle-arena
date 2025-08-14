@@ -8,13 +8,11 @@
         <!-- Left nav -->
         <div class="flex flex-row text-[#1E1E1E]">
           <!-- Logo -->
-          <div class="flex flex-col hover:cursor-pointer">
-            <p class="font-emeritus text-[1.79vw] font-normal leading-[1.8vw] tracking-[0]">IDLE</p>
-            <p class="font-emeritus text-[0.975vw] font-normal leading-[1vw] tracking-[0.1vw]">ARENA</p>
+          <div class="flex flex-col hover:cursor-pointer" @click="scrollToRef('home')">
+            <img src="../src/assets/img/Desktop/HomePage/logo.webp" alt="" class="w-[4.6vw] h-auto">
           </div>
-          <!-- Space items -->
-          <div
-            class="flex flex-row items-center text-[#1E1E1E] text-[0.83vw] font-lexend font-bold space-x-[4.58vw] pl-[3vw]">
+          <div class=" flex flex-row items-center text-[#1E1E1E] text-[0.83vw] font-lexend font-bold space-x-[4.58vw]
+              pl-[3vw]">
             <p class="hover:cursor-pointer" @click="scrollToRef('home')">Home</p>
             <p class="hover:cursor-pointer" @click="scrollToRef('features')">Features</p>
             <p class="hover:cursor-pointer" @click="scrollToRef('characters')">Characters</p>
@@ -82,8 +80,9 @@
               <p class="text-[#1E1E1E] text-[3.33vw] font-emeritus tracking-[-1.1%] leading-[3.33vw]">Conquer Chapters -
                 Climb the Stages
               </p>
-              <p class="text-center w-[32.6vw] text-[#1E1E1E] font-lexend">Lead your heroes through an epic journey,
-                battling enemies and bosses across countless chapters and stages.</p>
+              <p class="text-center w-[32.6vw] text-[#1E1E1E] font-lexend text-[0.83vw]">Lead your heroes through an
+                epic journey,
+                battling enemies and bosses across<br /> countless chapters and stages.</p>
             </div>
             <div class="absolute top-[29.6875vw] w-[83vw] z-10">
               <img src="../src/assets/img/Desktop/HomePage/board.webp" alt="" class="w-full">
@@ -132,7 +131,7 @@
           <!-- Center -->
           <div class="w-[83vw] h-[33.5vw] relative">
             <img src="../src/assets/img/Desktop/Adventure/ADVENTURE_GIRL.webp" alt=""
-              class="w-[32.65625vw] absolute top-0 left-[-2vw]">
+              class="w-[36vw] absolute top-[-4.5vw] left-[-2vw]">
             <div class="absolute top-[6.35vw] right-0 flex flex-col items-end space-y-[0.78125vw]">
               <p class="text-[#F9791C] text-[5.625vw] font-emeritus uppercase tracking-[-1.1%] leading-[5.625vw]">
                 Adventure</p>
@@ -754,7 +753,8 @@
 
           <!-- Logo -->
           <div
-            class="absolute top-[2.5vw] left-[8.8vw] w-[10.8vw] flex flex-col items-center space-y-[-0.1vw] hover:cursor-pointer">
+            class="absolute top-[2.5vw] left-[8.8vw] w-[10.8vw] flex flex-col items-center space-y-[-0.1vw] hover:cursor-pointer"
+            @click="scrollToRef('home')">
             <p class="text-[#1E1E1E] text-[4.21875vw] uppercase font-emeritus leading-[4.2vw] tracking-[-0.1vw] w-[10.8vw] text-balance
               ">
               IDLE</p>
@@ -771,19 +771,19 @@
           <!-- Nav select -->
           <div
             class="flex flex-row items-center absolute left-[22.76vw] top-[3.33vw] space-x-[3.177vw] text-[#1E1E1E] text-[1.146vw] font-league font-semibold leading-[1.15vw]">
-            <p class="hover:cursor-pointer">
+            <p class="hover:cursor-pointer" @click="scrollToRef('home')">
               Story
             </p>
-            <p class="hover:cursor-pointer">
+            <p class="hover:cursor-pointer" @click="scrollToRef('features')">
               Feature
             </p>
-            <p class="hover:cursor-pointer">
+            <p class="hover:cursor-pointer" @click="scrollToRef('characters')">
               Gameplay
             </p>
-            <p class="hover:cursor-pointer">
+            <p class="hover:cursor-pointer" @click="scrollToRef('community')">
               Community
             </p>
-            <p class="hover:cursor-pointer">
+            <p class="hover:cursor-pointer" @click="scrollToRef('contact')">
               Contact
             </p>
             <p class="hover:cursor-pointer">
@@ -1245,7 +1245,7 @@
 
 <script>
 // import lib
-import { ref, onMounted, computed, onBeforeUnmount } from "vue";
+import { ref, onMounted, computed, onBeforeUnmount, watch } from "vue";
 import Lenis from "@studio-freight/lenis";
 
 // export
@@ -1255,6 +1255,7 @@ export default {
     const homeFrame = ref(null);
     const gamePlay = ref(null);
     let lenis;
+    let rafId = 0;
     const windowWidth = ref(window.innerWidth);
     const isMobile = computed(() => windowWidth.value <= 768);
     const initialIsMobile = ref(isMobile.value);
@@ -1285,6 +1286,43 @@ export default {
         // window.location.reload(true);
         initialIsMobile.value = isMobile.value;
       }
+    };
+
+    const startRaf = () => {
+      const loop = (time) => {
+        // dùng window.__lenis để tránh closure giữ lenis cũ
+        const l = window.__lenis;
+        if (l) l.raf(time);
+        rafId = requestAnimationFrame(loop);
+      };
+      rafId = requestAnimationFrame(loop);
+    };
+
+    const stopRaf = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+    };
+
+    const initLenis = () => {
+      if (lenis) return;
+      lenis = new Lenis({
+        lerp: 0.09,
+        wheelMultiplier: 1.6,
+        touchMultiplier: 1.0,
+        smoothWheel: true,
+        smoothTouch: true
+      });
+      window.__lenis = lenis;
+      startRaf();
+    };
+
+    const destroyLenis = () => {
+      if (lenis) {
+        lenis.destroy();
+        lenis = null;
+      }
+      window.__lenis = null;
+      stopRaf();
     };
 
     const actorMap = {
@@ -1645,27 +1683,31 @@ export default {
     // Check when change width
     onMounted(() => {
       window.addEventListener("resize", handleResize);
-
-      lenis = new Lenis({
-        lerp: 0.09,
-        wheelMultiplier: 1.6,
-        touchMultiplier: 1.0,
-        smoothWheel: true,
-        smoothTouch: true
-      });
-      window.__lenis = lenis;
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
+      if (!isMobile.value) {
+        initLenis();
+      } else {
+        destroyLenis();
       }
-      requestAnimationFrame(raf);
     });
+
 
     const currentKey = computed(() => slides[current.value].key);
 
     const actorSrc = computed(() => actorMap[currentKey.value]?.src || '');
 
+    watch(isMobile, (val) => {
+      if (val) {
+        destroyLenis();
+        document.body.style.overflow = 'auto';
+      } else {
+        initLenis();
+        document.body.style.overflow = '';
+      }
+    });
+
     onBeforeUnmount(() => {
+      window.removeEventListener("resize", handleResize);
+      destroyLenis();
       if (lenis) {
         lenis.destroy();
       }
@@ -1806,8 +1848,16 @@ body {
   height: auto;
 }
 
-body {
-  overflow: hidden;
+@media (min-width: 769px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
 }
 
 html {
